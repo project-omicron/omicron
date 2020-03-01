@@ -8,7 +8,24 @@
 1. Develop complete system of chassis move (forward, backward, left, right, turn left, turn right)
 1. Add IMU (Inertial Measurement Unit) to Arduino
 
-## ToDoToDoToDo
+## Goals'n'Progress
+### 1st meeting 
+#### Goals
+- Understand (get documentation) motors and the driver
+- Make motors running with the Motor shield
+
+#### Results 
++ Documentation is collected
++ Motors supposed to be brushed-type
++ The hall sensors are for self implementation
++ Motors are running by the Arduino+Driver
++ Few schematics of the arduino and motor layout are created
++ Signal from the hall sensors should be read with 300Hz
++ Arduino pins required by Motor driver are 5V, GND, Digital_3..12
++ The pins that might be used for the hall sensors and and IMU: SDA, SCL, Analog(A)0 .. A5, Digital(D)0 .. D2, D13
+
+### 2nd meeting
+#### Goals
 * Direction **A** (Schemes 4 or 5)
 1. Find the new AdaFruit library that uses I2C
 1. Run motors with the new library
@@ -25,7 +42,29 @@
 5. Build the readout from Hall Sensors
 5. Adjust logic for motors moves 
 5. Combine readout and motor control
-5. ...
+
+#### Results 
++ The new AdaFruit library that uses I2C is made for the new Motors driver board (Version 2). That is why we should try plan with existing library (Version 1)
++ Rechecked Arduino pins that are required by the motor driver board: 5V, GND, Digital(D)3, D4, D5, D6, D7, D8, D12 (D9, D10, D11 are not used by _AVR_ microcontrollers)
++ The Arduino pins D0 and D1 most probably can not be used for reading the data: the Arduino can not be flashed if something is attached to D0 and D1
++ The code for running 4 motors together is created: moving forwards, backwards, rights, lefts, turn right, turn left
++ The correct location of the wheels is found: the right-left wheels pattern (on the same axis) should have same orientation; the front-real wheels pattern (on the same side) should have opposite orientation
++ **The chassis are moving !!!**
+
+### 3rd meeting
+#### Goals
+- Implement _Scheme_1_
+- **A**: implement readings from the hall sensors
+	1. Is the _digital_read_ pins in a loop enough fast for reading all 8 hall sensors?
+	1. Are D2, D9 .. D11, A0 .. A5 working fine (fast and reliable) with the hall sensors
+	1. Make FeedBack loop for the motors
+- **B**: establish / create layout of batteries for Arduino, Jetson Nano, motors
+- **C**: calibrate all (8) motors: find ratio of a motor rotation for a fixed voltage/current value (are the currents the same for all motors?)
+
+#### Results 
++ ...
+
+
 
 
 ## Arduino
