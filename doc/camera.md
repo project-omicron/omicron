@@ -26,5 +26,4 @@ roslaunch realsense2_camera rs_camera.launch
 ```
 ## Problemsolving
 
-If you have problems with the directory ```/usr/include/opencv```
-Just create the symbolic from where OpenCV was installed. In our case the issue was that OpenCV was installed to the directory: /usr/include/opencv4.
+If you have problems with the directory ```/usr/include/opencv``` just create the symbolic from where OpenCV was installed. In our case the issue was that OpenCV was installed to the directory ```/usr/include/opencv4```.
