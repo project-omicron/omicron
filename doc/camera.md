@@ -1,5 +1,11 @@
 # IntelRealsense D435 setup
 
+## Before you start
+```
+sudo apt update
+sudo apt upgrade
+```
+
 ## Dependencies
 ```
 sudo apt-key adv --keyserver keys.gnupg.net --recv-key F6E65AC044F831AC80A06380C8B3A55A6F3EFCDE || sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-key
@@ -18,3 +24,7 @@ cd .. && catkin_make && source devel/setup.bash
 
 roslaunch realsense2_camera rs_camera.launch
 ```
+## Problemsolving
+
+If you have problems with the directory ```/usr/include/opencv```
+Just create the symbolic from where OpenCV was installed. In our case the issue was that OpenCV was installed to the directory: /usr/include/opencv4.
