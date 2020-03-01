@@ -15,3 +15,6 @@ git clone  https://github.com/robopeak/rplidar_ros.git
 cd .. && catkin_make && source devel/setup.bash
 roslaunch rplidar_ros view_rplidar.launch
 ```
+
+Important:
+The Lidar is sensitive to the quality of cables. Please use high quality cables.
