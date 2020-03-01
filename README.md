@@ -2,7 +2,14 @@
 
 Entry pointto the robot.
 
-The setup should be something like
+How to prepare the imge and the Jetson Nano:
+
+follow the instructions from here:
+```
+https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit#intro
+```
+
+Please boot the jetson nao and execute the following commands:
 ```
 git clone https;//github.com/project-omicron/omicron
 cd omicron
